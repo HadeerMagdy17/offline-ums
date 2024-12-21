@@ -1,12 +1,11 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { AuthContext } from '../Context/AuthContext';
 import { useContext } from 'react';
 
 export default function NavBar() {
-  let {userData}=useContext(AuthContext)
+  let {userData}:any=useContext(AuthContext)
   return (
     <>
        <Navbar expand="lg" className="bg-body-tertiary">
@@ -16,7 +15,7 @@ export default function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Hello {userData?.firstName}</Nav.Link>
-            <Nav.Link href="#link">mail is:{userData?.email}</Nav.Link>
+            <Nav.Link href="#link">mail is: {userData?.email}</Nav.Link>
           
           </Nav>
         </Navbar.Collapse>
