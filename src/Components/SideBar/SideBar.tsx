@@ -4,12 +4,12 @@ import { FaUsersGear } from "react-icons/fa6";
 import { RiLogoutCircleLine } from "react-icons/ri";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Link, useNavigate } from "react-router-dom";
-import profile from "../../assets/profile.png"
+
 import { useContext, useState } from "react";
 import { AuthContext } from "../Context/AuthContext";
 export default function SideBar() {
 let navigate=useNavigate()
-  let {userData}=useContext(AuthContext)
+  let {userData}:any=useContext(AuthContext)
   let[isCollapsed,setIsCollapsed]=useState(false)
 
 let logout=()=>{
